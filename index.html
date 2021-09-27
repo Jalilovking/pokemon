@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pokemon</title>
+    <link rel="stylesheet" href="./css/normalize.css">
+    <link rel="stylesheet" href="./css/fonts.css">
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+<body class="body">
+    
+    <header class="header">
+        <div class="header__container container">
+            <a class="header__logo" href="#"><img src="./img/pokemon_logo.png" alt="pokemon logo" width="610" height="225"></a>
+            <button class="header__btn" type="button"><img src="./img/heart.svg" alt="heart" width="50" height="50"></button>
+        </div>
+    </header>
+    <main class="main">
+        <section class="pokemon">
+            <div class="container">
+                <form class="form">
+                    <select class="input type__selection">
+                        <option class="pokemon__option" value="All">All</option>
+                    </select>
+                    <input class="form__search" type="text" placeholder="Search">
+                    <select class="input sort__selection">
+                        <option class="pokemon__option" value="all">All</option>
+                        <option class="pokemon__option" value="a_z">A_Z</option>
+                        <option class="pokemon__option" value="z_a">Z_A</option>
+                        <option class="pokemon__option" value="old_new">Old_New</option>
+                        <option class="pokemon__option" value="new_old">New_Old</option>
+                    </select>
+                    <button class="pokemon__btn-header">Button</button>
+                </form>
+
+                <ul class="pokemon__card-wrapper"></ul>
+                
+                <div class="modal" data-modal="1" >
+                    <div class="modal__field">
+                        <button class="modal__btn">
+                            <img class="modal__img" src="img/icon.png" alt="">
+                        </button>
+                        <ul class="modal__list">
+                            
+                        </ul>
+                    </div>
+                </div>
+
+                <template id="template">
+                    <li class="pokemon__item">
+                        <img class="pokemon__img" src="https://picsum.photos/300" width="157" height="157">
+                        <hr class="pokemon__hr">
+                        <div class="pokemon__card-box">
+                            <h2 class="pokemon__card-title">Pokemons</h2>
+                            <h3 class="pokemon__type">Grass, Poison</h3>
+                            <div class="pokemon__wrapper">
+                                <p class="pokemon__weight">6.9kg</p>
+                                <p class="pokemon__age">99 age</p>
+                            </div>
+                            <button class="pokemon__card-btn">
+                                <img class="pokemon__card-img" src="./img/heart.svg" alt="" width="30" height="30">
+                            </button>
+                        </div>
+                    </li>
+                </template>
+
+                <!-- <template id="template">
+                    <li class="item">
+                        <img class="item__img" src="htpps://picsum.photos/157" alt="">
+                        <div class="wrapper">
+                            <div class="wrapper__secondary">
+                                <h3 class="item__name">Pokemons</h3>
+                                <p class="item__type">Grass, Poison</p>
+                                <div class="items__wrapper">
+                                    <p class="item__kilo"></p>
+                                    <p class="item__age">34 age</p>
+                                </div>
+                            </div>
+                            <button class="item__save">
+                                <img src="./img/heart.svg" alt="" width="30" height="30">
+                            </button>
+                        </div>
+                    </li>
+                </template> -->
+            </div>
+        </section>
+    </main>
+
+
+    <script src="./js/pokemons.js"></script>
+    <script src="./js/index.js"></script>
+</body>
+</html>
